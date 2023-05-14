@@ -21,8 +21,8 @@ Route::controller(AuthController::class)->group(function () {
 });
 
 Route::controller(UserController::class)->group(function () {
-    Route::get("user/index", "index")->middleware('can:index')->name("index");
-    Route::get("user/show/{id}", "show")->middleware('can:show')->name("show");
-    Route::put("user/update", "update")->middleware('can:update')->name("update");
-    Route::delete("user/destroy/{id}", "destroy")->middleware('can:destroy')->name("destroy");
+    Route::get("user/index", "index")->name("index");
+    Route::get("user/show/{id}", "show")->name("show");
+    Route::put("user/update", "update")->name("update");
+    Route::delete("user/destroy/{id}", "destroy")->name("destroy");
 });
